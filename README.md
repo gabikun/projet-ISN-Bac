@@ -2,8 +2,12 @@
 projet de bac ISN
 
 projet énigme texte
-idée :
-plus on avance dans la journée, plus on recule dans le temps.
-dans le passé il trouve un code qui lui sert dans le présent.
+__idée :__
+_histoire:_
+- plus on avance dans la journée, plus on recule dans le temps.
+- dans le passé il trouve un code qui lui sert dans le présent.
 
-personnage : Alaric 16 ans
+_autre:_
+- 1-2 mini jeu a prog
+
+personnage : Alaric 16 ans (principal) / Alan (référence a Alan Turing)
