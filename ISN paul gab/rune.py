@@ -19,10 +19,13 @@ class Application:
         self.photo_fond = PhotoImage (file="sallefond.png")
 
         self.cannevasFond = Canvas (self.fen, width =self.photo_fond.width() , height =self.photo_fond.height() ,  bg = "green")
-        self.cannevasFond.grid(row = 1, column = 1)
+        self.cannevasFond.grid(row = 1, column = 1, columnspan = 5, rowspan = 5)
+        self.cannevasFond.configure (border=5)
+
+        self.image_fond = self.cannevasFond.create_image((self.photo_fond.width()+14)//2,(self.photo_fond.height()+14)//2,image = self.photo_fond)
 
 
-        self.image_fond = self.cannevasFond.create_image(self.photo_fond.width()//2,self.photo_fond.height()//2,image = self.photo_fond)
+
 
 app=Application()
 app.fen.mainloop()
