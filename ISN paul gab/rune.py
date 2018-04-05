@@ -17,12 +17,34 @@ class Application:
                 underline = False)
 
         self.photo_fond = PhotoImage (file="sallefond.png")
+        self.parchemin = PhotoImage (file="parchemin.png")
+        self.pierre = PhotoImage (file="pierre.png")
 
         self.cannevasFond = Canvas (self.fen, width =self.photo_fond.width() , height =self.photo_fond.height() ,  bg = "green")
         self.cannevasFond.grid(row = 1, column = 1, columnspan = 5, rowspan = 5)
         self.cannevasFond.configure (border=5)
 
         self.image_fond = self.cannevasFond.create_image((self.photo_fond.width()+14)//2,(self.photo_fond.height()+14)//2,image = self.photo_fond)
+
+        self.tab_runes = [[0,2,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]]
+
+        self.tab_pierre= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        self.dessin()
+
+
+
+    def dessin(self):
+        num_pierre=0
+        for i in range(5):
+            for j in range(5):
+                if self.tab_runes[i][j]==1:
+                    self.tab_pierre[num_pierre] = self.cannevasFond.create_image((i*50)+32,(j*50)+32, image=self.pierre)
+                if self.tab_runes[i][j]==2:
+                    self.tab_pierre[num_pierre] = self.cannevasFond.create_image((i*50)+32,(j*50)+32, image=self.parchemin)
+
+
+
+
 
 
 
